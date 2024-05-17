@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="OHSDyHJxklO90PgIMaNnVq9rvjHnjqcffhGvHBIS">
+
+    <title>Home - GILL MOBILES &amp; PHOTOSTATE 16DB</title>
+
+    <link rel="stylesheet" href="https://demosystem.hisabkarlay.com/css/vendor.css?v=511">
+
+
+
+    <!-- app css -->
+    <link rel="stylesheet" href="https://demosystem.hisabkarlay.com/css/app.css?v=511">
+
+    <style type="text/css">
+        /*
+	* Pattern lock css
+	* Pattern direction
+	* http://ignitersworld.com/lab/patternLock.html
+	*/
+
+        .patt-wrap {
+            z-index: 10;
+        }
+
+        .patt-circ.hovered {
+            background-color: #cde2f2;
+            border: none;
+        }
+
+        .patt-circ.hovered .patt-dots {
+            display: none;
+        }
+
+        .patt-circ.dir {
+            background-image: url("https://demosystem.hisabkarlay.com/img/pattern-directionicon-arrow.png");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .patt-circ.e {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+        }
+
+        .patt-circ.s-e {
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .patt-circ.s {
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+
+        .patt-circ.s-w {
+            -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+
+        .patt-circ.w {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        .patt-circ.n-w {
+            -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+        }
+
+        .patt-circ.n {
+            -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+        }
+
+        .patt-circ.n-e {
+            -webkit-transform: rotate(315deg);
+            transform: rotate(315deg);
+        }
+    </style>
+
+</head>
+
+<body class=" hold-transition skin-red sidebar-mini ">
+    <div class="wrapper thetop">
+        <script type="text/javascript">
+            if (localStorage.getItem("upos_sidebar_collapse") == 'true') {
+                var body = document.getElementsByTagName("body")[0];
+                body.className += " sidebar-collapse";
+            }
+        </script>
+        <!-- Main Header -->
+        <header class="main-header no-print">
+            <a href="https://demosystem.hisabkarlay.com/home" class="logo">
+      
+      <span class="logo-lg">GILL MOBILES &amp; PHOTOSTATE 16DB <i class="fa fa-circle text-success" id="online_indicator"></i></span> 
+
+    </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        &#9776;
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+
+
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+
+                    <button type="button" class="btn bg-blue btn-flat 
+		pull-left m-8 btn-sm mt-10 
+		clock_in_btn
+				" data-type="clock_in" data-toggle="tooltip" data-placement="bottom" title="Clock In">
+	    <i class="fas fa-arrow-circle-down"></i>
+	</button>
+
+                    <button type="button" class="btn bg-yellow btn-flat pull-left m-8 
+		 btn-sm mt-10 clock_out_btn
+			    	hide
+	    		" data-type="clock_out" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Clock Out ">
+	    <i class="fas fa-hourglass-half fa-spin"></i>
+	</button>
+
+                    <div class="btn-group">
+                        <button id="header_shortcut_dropdown" type="button" class="btn btn-success dropdown-toggle btn-flat pull-left m-8 btn-sm mt-10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-plus-circle fa-lg"></i>
+          </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://demosystem.hisabkarlay.com/calendar">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i> Calendar              </a></li>
+                            <li><a href="#" class="btn-modal" data-href="https://demosystem.hisabkarlay.com/essentials/todo/create" data-container="#task_modal">
+                  <i class="fas fa-clipboard-check" aria-hidden="true"></i> Add To Do              </a></li>
+                            <!-- Help Button -->
+                            <li><a id="start_tour" href="#">
+                  <i class="fas fa-question-circle" aria-hidden="true"></i> Application Tour              </a></li>
+                        </ul>
+                    </div>
+                    <button id="btnCalculator" title="Calculator" type="button" class="btn btn-success btn-flat pull-left m-8 btn-sm mt-10 popover-default hidden-xs" data-toggle="popover" data-trigger="click" data-content='<div id="calculator">
+  <div class="row text-center" id="calc">
+    <div class="calcBG col-md-12 text-center">
+      <div class="row" id="result">
+        <form name="calc">
+          <input type="text" class="screen text-right" name="result" readonly>
+        </form>
+      </div>
+      <div class="row">
+        <button id="allClear" type="button" class="btn btn-danger" onclick="clearScreen()">AC</button>
+        <button id="clear" type="button" class="btn btn-warning" onclick="clearScreen()">CE</button>
+        <button id="%" type="button" class="btn" onclick="calEnterVal(this.id)">%</button>
+        <button id="/" type="button" class="btn" onclick="calEnterVal(this.id)">÷</button>
+      </div>
+      <div class="row">
+        <button id="7" type="button" class="btn" onclick="calEnterVal(this.id)">7</button>
+        <button id="8" type="button" class="btn" onclick="calEnterVal(this.id)">8</button>
+        <button id="9" type="button" class="btn" onclick="calEnterVal(this.id)">9</button>
+        <button id="*" type="button" class="btn" onclick="calEnterVal(this.id)">x</button>
+      </div>
+      <div class="row">
+        <button id="4" type="button" class="btn" onclick="calEnterVal(this.id)">4</button>
+        <button id="5" type="button" class="btn" onclick="calEnterVal(this.id)">5</button>
+        <button id="6" type="button" class="btn" onclick="calEnterVal(this.id)">6</button>
+        <button id="-" type="button" class="btn" onclick="calEnterVal(this.id)">-</button>
+      </div>
+      <div class="row">
+        <button id="1" type="button" class="btn" onclick="calEnterVal(this.id)">1</button>
+        <button id="2" type="button" class="btn" onclick="calEnterVal(this.id)">2</button>
+        <button id="3" type="button" class="btn" onclick="calEnterVal(this.id)">3</button>
+        <button id="+" type="button" class="btn" onclick="calEnterVal(this.id)">+</button>
+      </div>
+      <div class="row">
+        <button id="0" type="button" class="btn" onclick="calEnterVal(this.id)">0</button>
+        <button id="." type="button" class="btn" onclick="calEnterVal(this.id)">.</button>
+        <button id="equals" type="button" class="btn btn-success" onclick="calculate()">=</button>
+        <button id="blank" type="button" class="btn">&nbsp;</button>
+      </div>
+    </div>
+  </div>
+</div>' data-html="true" data-placement="bottom">
+                    <strong><i class="fa fa-calculator fa-lg" aria-hidden="true"></i></strong>
+                    </button>
+
+
+                    <a href="https://demosystem.hisabkarlay.com/pos/create" title="POS" data-toggle="tooltip" data-placement="bottom" class="btn btn-flat pull-left m-8 btn-sm mt-10 btn-success">
+              <strong><i class="fa fa-th-large"></i> &nbsp; POS</strong>
+            </a>
+
+
+                    <button type="button" id="view_todays_profit" title="Today&#039;s profit" data-toggle="tooltip" data-placement="bottom" class="btn btn-success btn-flat pull-left m-8 btn-sm mt-10">
+            <strong><i class="fas fa-money-bill-alt fa-lg"></i></strong>
+          </button>
+
+                    <div class="m-8 pull-left mt-15 hidden-xs" style="color: #fff;"><strong>17-05-2024</strong></div>
+
+                    <ul class="nav navbar-nav">
+                        <!-- Notifications: style can be found in dropdown.less -->
+                        <li class="dropdown notifications-menu">
+                            <a href="#" class="dropdown-toggle load_notifications" data-toggle="dropdown" id="show_unread_notifications" data-loaded="false">
+    <i class="fas fa-bell"></i>
+    <span class="label label-warning notifications_count"></span>
+  </a>
+                            <ul class="dropdown-menu">
+                                <!-- <li class="header">You have 10 unread notifications</li> -->
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+
+                                    <ul class="menu" id="notifications_list">
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <input type="hidden" id="notification_page" value="1">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <!-- The user image in the navbar-->
+                                <img src="https://demosystem.hisabkarlay.com/uploads/media/1714476096_354260712_hisab%20karlay%20logo.jpeg" class="user-image" alt="User Image">
+                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                <span>Aliyan Demo POS </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+                                <li class="user-header">
+                                    <img src="https://demosystem.hisabkarlay.com/uploads/business_logos/1715779337_logo.jpg" alt="Logo">
+                                    <p>
+                                        Aliyan Demo POS
+                                    </p>
+                                </li>
+                                <!-- Menu Body -->
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="https://demosystem.hisabkarlay.com/user/profile" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="https://demosystem.hisabkarlay.com/logout" class="btn btn-default btn-flat">Sign Out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+
+                <a href="https://demosystem.hisabkarlay.com/home" class="logo">
+		<span class="logo-lg">GILL MOBILES &amp; PHOTOSTATE 16DB</span>
+	</a>
+
+                <!-- Sidebar Menu -->
+
+                <ul class="sidebar-menu tree" data-widget="tree">
+                    <li class="active"><a href="https://demosystem.hisabkarlay.com/home"><i class="fa fas fa-tachometer-alt"></i> <span>Home</span></a></li>
+                    <li class="treeview">
+                        <a href="#">
+					<i class="fa fas fa-users"></i> <span>User Management</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+			      </a>
+                        <ul class="treeview-menu">
+                            <li><a href="https://demosystem.hisabkarlay.com/users"><i class="fa fas fa-user"></i> <span>Users</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/roles"><i class="fa fas fa-briefcase"></i> <span>Roles</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/sales-commission-agents"><i class="fa fas fa-handshake"></i> <span>Sales Commission Agents</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview" id="tour_step4">
+                        <a href="#">
+					<i class="fa fas fa-address-book"></i> <span>Contacts</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+			      </a>
+                        <ul class="treeview-menu">
+                            <li><a href="https://demosystem.hisabkarlay.com/contacts?type=supplier"><i class="fa fas fa-star"></i> <span>Suppliers</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/contacts?type=customer"><i class="fa fas fa-star"></i> <span>Customers</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/customer-group"><i class="fa fas fa-users"></i> <span>Customer Groups</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/contacts/import"><i class="fa fas fa-download"></i> <span>Import Contacts</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview" id="tour_step5">
+                        <a href="#">
+					<i class="fa fas fa-cubes"></i> <span>Products</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+			      </a>
+                        <ul class="treeview-menu">
+                            <li><a href="https://demosystem.hisabkarlay.com/products"><i class="fa fas fa-list"></i> <span>List Products</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/products/create"><i class="fa fas fa-plus-circle"></i> <span>Add Product</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/update-product-price"><i class="fa fas fa-circle"></i> <span>Update Price</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/labels/show"><i class="fa fas fa-barcode"></i> <span>Print Labels</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/variation-templates"><i class="fa fas fa-circle"></i> <span>Variations</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/import-products"><i class="fa fas fa-download"></i> <span>Import Products</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/import-opening-stock"><i class="fa fas fa-download"></i> <span>Import Opening Stock</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/selling-price-group"><i class="fa fas fa-circle"></i> <span>Selling Price Group</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/units"><i class="fa fas fa-balance-scale"></i> <span>Units</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/taxonomies?type=product"><i class="fa fas fa-tags"></i> <span>Categories</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/brands"><i class="fa fas fa-gem"></i> <span>Brands</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/currencychanges"><i class="fa fas fa-gem"></i> <span>CurrencyChange</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/warranties"><i class="fa fas fa-shield-alt"></i> <span>Warranties</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview" id="tour_step6">
+                        <a href="#">
+					<i class="fa fas fa-arrow-circle-down"></i> <span>Purchases</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+			      </a>
+                        <ul class="treeview-menu">
+                            <li><a href="https://demosystem.hisabkarlay.com/purchases"><i class="fa fas fa-list"></i> <span>List Purchases</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/purchases/create"><i class="fa fas fa-plus-circle"></i> <span>Add Purchase</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/purchase-return"><i class="fa fas fa-undo"></i> <span>List Purchase Return</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview" id="tour_step7">
+                        <a href="#">
+					<i class="fa fas fa-arrow-circle-up"></i> <span>Sell</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+			      </a>
+                        <ul class="treeview-menu">
+                            <li><a href="https://demosystem.hisabkarlay.com/sells"><i class="fa fas fa-list"></i> <span>All sales</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/sells/create"><i class="fa fas fa-plus-circle"></i> <span>Add Sale</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/pos"><i class="fa fas fa-list"></i> <span>List POS</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/pos/create"><i class="fa fas fa-plus-circle"></i> <span>POS</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/sells/create?status=draft"><i class="fa fas fa-plus-circle"></i> <span>Add Draft</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/sells/drafts"><i class="fa fas fa-pen-square"></i> <span>List Drafts</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/sells/create?status=quotation"><i class="fa fas fa-plus-circle"></i> <span>Add Quotation</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/sells/quotations"><i class="fa fas fa-pen-square"></i> <span>List quotations</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/sell-return"><i class="fa fas fa-undo"></i> <span>List Sell Return</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/shipments"><i class="fa fas fa-truck"></i> <span>Shipments</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/discount"><i class="fa fas fa-percent"></i> <span>Discounts</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/import-sales"><i class="fa fas fa-file-import"></i> <span>Import Sales</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+					<i class="fa fas fa-truck"></i> <span>Stock Transfers</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+			      </a>
+                        <ul class="treeview-menu">
+                            <li><a href="https://demosystem.hisabkarlay.com/stock-transfers"><i class="fa fas fa-list"></i> <span>List Stock Transfers</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/stock-transfers/create"><i class="fa fas fa-plus-circle"></i> <span>Add Stock Transfer</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+					<i class="fa fas fa-database"></i> <span>Stock Adjustment</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+			      </a>
+                        <ul class="treeview-menu">
+                            <li><a href="https://demosystem.hisabkarlay.com/stock-adjustments"><i class="fa fas fa-list"></i> <span>List Stock Adjustments</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/stock-adjustments/create"><i class="fa fas fa-plus-circle"></i> <span>Add Stock Adjustment</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+					<i class="fa fas fa-minus-circle"></i> <span>Expenses</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+			      </a>
+                        <ul class="treeview-menu">
+                            <li><a href="https://demosystem.hisabkarlay.com/expenses"><i class="fa fas fa-list"></i> <span>List Expenses</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/expenses/create"><i class="fa fas fa-plus-circle"></i> <span>Add Expense</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/expense-categories"><i class="fa fas fa-circle"></i> <span>Expense Categories</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+					<i class="fa fas fa-money-check-alt"></i> <span>Payment Accounts</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+			      </a>
+                        <ul class="treeview-menu">
+                            <li><a href="https://demosystem.hisabkarlay.com/account/account"><i class="fa fas fa-list"></i> <span>List Accounts</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/account/balance-sheet"><i class="fa fas fa-book"></i> <span>Balance Sheet</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/account/trial-balance"><i class="fa fas fa-balance-scale"></i> <span>Trial Balance</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/account/cash-flow"><i class="fa fas fa-exchange-alt"></i> <span>Cash Flow</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/account/payment-account-report"><i class="fa fas fa-file-alt"></i> <span>Payment Account Report</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview" id="tour_step8">
+                        <a href="#">
+					<i class="fa fas fa-chart-bar"></i> <span>Reports</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+			      </a>
+                        <ul class="treeview-menu">
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/profit-loss"><i class="fa fas fa-file-invoice-dollar"></i> <span>Profit / Loss Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/purchase-sell"><i class="fa fas fa-exchange-alt"></i> <span>Purchase & Sale</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/tax-report"><i class="fa fas fa-percent"></i> <span>Tax Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/oder_reports"><i class="fa fas fa-arrow-circle-down"></i> <span> Service Staff Order Reports</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/customer-supplier"><i class="fa fas fa-address-book"></i> <span>Supplier & Customer Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/customer-group"><i class="fa fas fa-users"></i> <span>Customer Groups Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/stock-report"><i class="fa fas fa-hourglass-half"></i> <span>Stock Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/stock-expiry"><i class="fa fas fa-calendar-times"></i> <span>Stock Expiry Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/stock-adjustment-report"><i class="fa fas fa-sliders-h"></i> <span>Stock Adjustment Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/trending-products"><i class="fa fas fa-chart-line"></i> <span>Trending Products</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/items-report"><i class="fa fas fa-tasks"></i> <span>Items Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/product-purchase-report"><i class="fa fas fa-arrow-circle-down"></i> <span>Product Purchase Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/product-sell-report"><i class="fa fas fa-arrow-circle-up"></i> <span>Product Sell Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/purchase-payment-report"><i class="fa fas fa-search-dollar"></i> <span>Purchase Payment Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/sell-payment-report"><i class="fa fas fa-search-dollar"></i> <span>Sell Payment Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/expense-report"><i class="fa fas fa-search-minus"></i> <span>Expense Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/register-report"><i class="fa fas fa-briefcase"></i> <span>Register Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/sales-representative-report"><i class="fa fas fa-user"></i> <span>Sales Representative Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/table-report"><i class="fa fas fa-table"></i> <span>Table Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/get-kot"><i class="fa fas fa-user-secret"></i> <span>Kot Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/service-staff-report"><i class="fa fas fa-user-secret"></i> <span>Service Staff Report</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/reports/activity-log"><i class="fa fas fa-user-secret"></i> <span>Activity Log</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="https://demosystem.hisabkarlay.com/backup"><i class="fa fas fa-hdd"></i> <span>Administer Backup</span></a></li>
+                    <li><a href="https://demosystem.hisabkarlay.com/manage-modules"><i class="fa fas fa-plug"></i> <span>Modules</span></a></li>
+                    <li><a href="https://demosystem.hisabkarlay.com/bookings"><i class="fas fa fa-calendar-check"></i> <span>Bookings</span></a></li>
+                    <li><a href="https://demosystem.hisabkarlay.com/modules/kitchen"><i class="fa fas fa-fire"></i> <span>Kitchen</span></a></li>
+                    <li><a href="https://demosystem.hisabkarlay.com/modules/orders"><i class="fa fas fa-list-alt"></i> <span>Orders</span></a></li>
+                    <li><a href="https://demosystem.hisabkarlay.com/notification-templates"><i class="fa fas fa-envelope"></i> <span>Notification Templates</span></a></li>
+                    <li class="treeview" id="tour_step3">
+                        <a href="#">
+					<i class="fa fas fa-cog"></i> <span>Settings</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+			      </a>
+                        <ul class="treeview-menu">
+                            <li><a href="https://demosystem.hisabkarlay.com/business/settings" id="tour_step2"><i class="fa fas fa-cogs"></i> <span>Business Settings</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/business-location"><i class="fa fas fa-map-marker"></i> <span>Business Locations</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/invoice-schemes"><i class="fa fas fa-file"></i> <span>Invoice Settings</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/barcodes"><i class="fa fas fa-barcode"></i> <span>Barcode Settings</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/printers"><i class="fa fas fa-share-alt"></i> <span>Receipt Printers</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/tax-rates"><i class="fa fas fa-bolt"></i> <span>Tax Rates</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/modules/tables"><i class="fa fas fa-table"></i> <span>Tables</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/types-of-service"><i class="fa fas fa-user-circle"></i> <span>Types of service</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="https://demosystem.hisabkarlay.com/hrm/dashboard" style=""><i class="fa fas fa-users"></i> <span>HRM</span></a></li>
+                    <li><a href="https://demosystem.hisabkarlay.com/essentials/todo" style=""><i class="fa fas fa-check-circle"></i> <span>Essentials</span></a></li>
+                    <li class="treeview" style="background-color: #2dce89 !important;">
+                        <a href="#">
+					<i class="fas fa-plug"></i> <span>Connector</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+			      </a>
+                        <ul class="treeview-menu">
+                            <li><a href="https://demosystem.hisabkarlay.com/connector/client"><i class="fa fas fa-network-wired"></i> <span>Clients</span></a></li>
+                            <li><a href="https://demosystem.hisabkarlay.com/\docs"><i class="fa fas fa-book"></i> <span>Documentation</span></a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+
+
+                <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class=" content-wrapper ">
+            <!-- empty div for vuejs -->
+            <div id="app">
+            </div>
+            <!-- Add currency related field-->
+            <input type="hidden" id="__code" value="PKR">
+            <input type="hidden" id="__symbol" value="₨">
+            <input type="hidden" id="__thousand" value=",">
+            <input type="hidden" id="__decimal" value=".">
+            <input type="hidden" id="__symbol_placement" value="before">
+            <input type="hidden" id="__precision" value="2">
+            <input type="hidden" id="__quantity_precision" value="2">
+            <!-- End of currency related field-->
+            <input type="hidden" id="view_export_buttons">
+            <input type="hidden" id="__is_mobile">
+
+            <!-- Content Header (Page header) -->
+            <section class="content-header content-header-custom">
+                <h3>Welcome Aliyan Demo POS,
+                </h3>
+            </section>
+            <!-- Main content -->
+            <section class="content content-custom no-print">
+                <br>
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                    </div>
+                    <div class="col-md-8 col-xs-12">
+                        <div class="form-group pull-right">
+                            <div class="input-group">
+                                <button type="button" class="btn btn-primary" id="dashboard_date_filter">
+                                    <span>
+                                        <i class="fa fa-calendar"></i> Filter by date
+                                    </span>
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row row-custom">
+                    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
+                        <div class="info-box info-box-new-style">
+                            <span class="info-box-icon bg-aqua"><i class="ion ion-cash"></i></span>
+
+                            <div class="info-box-content">
+                                <span class="info-box-text">Total purchase</span>
+                                <span class="info-box-number total_purchase"><i
+                                        class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
+                        <div class="info-box info-box-new-style">
+                            <span class="info-box-icon bg-aqua"><i class="ion ion-ios-cart-outline"></i></span>
+
+                            <div class="info-box-content">
+                                <span class="info-box-text">Total Sales</span>
+                                <span class="info-box-number total_sell"><i
+                                        class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
+                        <div class="info-box info-box-new-style">
+                            <span class="info-box-icon bg-yellow">
+                                <i class="fa fa-dollar"></i>
+                                <i class="fa fa-exclamation"></i>
+                            </span>
+
+                            <div class="info-box-content">
+                                <span class="info-box-text">Purchase due</span>
+                                <span class="info-box-number purchase_due"><i
+                                        class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+
+                    <!-- fix for small devices only -->
+                    <!-- <div class="clearfix visible-sm-block"></div> -->
+                    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
+                        <div class="info-box info-box-new-style">
+                            <span class="info-box-icon bg-yellow">
+                                <i class="ion ion-ios-paper-outline"></i>
+                                <i class="fa fa-exclamation"></i>
+                            </span>
+
+                            <div class="info-box-content">
+                                <span class="info-box-text">Invoice due</span>
+                                <span class="info-box-number invoice_due"><i
+                                        class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <div class="row row-custom">
+                    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
+                        <div class="info-box info-box-new-style">
+                            <span class="info-box-icon bg-red text-white">
+                                <i class="fas fa-undo-alt"></i>
+                            </span>
+
+                            <div class="info-box-content">
+                                <span class="info-box-text">Total Purchase Return</span>
+                                <span class="info-box-number total_purchase_return"><i
+                                        class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
+                        <div class="info-box info-box-new-style">
+                            <span class="info-box-icon bg-red text-white">
+                                <i class="fas fa-exchange-alt"></i>
+                            </span>
+
+                            <div class="info-box-content">
+                                <span class="info-box-text">Total Sell Return</span>
+                                <span class="info-box-number total_sell_return"><i
+                                        class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- expense -->
+                    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
+                        <div class="info-box info-box-new-style">
+                            <span class="info-box-icon bg-red">
+                                <i class="fas fa-minus-circle"></i>
+                            </span>
+
+                            <div class="info-box-content">
+                                <span class="info-box-text">
+                                    Expense
+                                </span>
+                                <span class="info-box-number total_expense"><i
+                                        class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- expense -->
+                    <div class="col-md-3 col-sm-6 col-xs-12 ">
+                        <div class="info-box info-box-new-style">
+                            <span class="info-box-icon bg-red">
+                                <span class="info-box-icon bg-aqua">
+                                    <i class="fa fa-comments-dollar"></i>
+                                </span>
+                            </span>
+
+                            <div class="info-box-content">
+                                <span class="info-box-text">
+                                    Purchase paid Cash
+                                </span>
+                                <span class="info-box-number total_due"><i
+                                        class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                            </div>
+
+                            <!-- /.info-box-content -->
+                        </div>
+
+                        <!-- /.info-box -->
+                    </div>
+                </div>
+
+                <div class="row row-custom">
+
+                    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
+                        <div class="info-box info-box-new-style">
+                            <span class="info-box-icon bg-aqua"><i class="ion ion-cash"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">
+                                    
+                                    cash Received
+                                </span>
+                                <span class="info-box-number cashReceiveds"><i
+                                        class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
+                        <div class="info-box info-box-new-style">
+                            <span class="info-box-icon bg-aqua"><i class="ion ion-cash"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">
+                                    
+                                    cash in hand
+                                    
+                                </span>
+                                <span class="info-box-number cashhand"><i
+                                        class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
+                        <div class="info-box info-box-new-style">
+                            <span class="info-box-icon bg-yellow"><i class="fas fa-plus-circle"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">
+                                    
+                                    Total Discounts
+                                </span>
+                                <span class="info-box-number total_discounts"><i
+                                        class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                </div>
+
+
+
+                <!-- end is_admin check -->
+                <!-- sales chart start -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="box box-primary">
+                            <div class="box-header">
+
+                                <h3 class="box-title">Sales Last 30 Days</h3>
+
+
+                            </div>
+
+                            <div class="box-body">
+                                <div id="vouxspaewltigbnjqdfzkrymh" style='height: 400px !important;'>
+                                </div>
+                                <div id="vouxspaewltigbnjqdfzkrymh_loader" style="
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    align-items: center;
+    height: 400px;
+    
+">
+                                    <svg width="50" height="50" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a">
+                <stop stop-color="#22292F" stop-opacity="0" offset="0%"/>
+                <stop stop-color="#22292F" stop-opacity=".631" offset="63.146%"/>
+                <stop stop-color="#22292F" offset="100%"/>
+            </linearGradient>
+        </defs>
+        <g fill="none" fill-rule="evenodd">
+            <g transform="translate(1 1)">
+                <path d="M36 18c0-9.94-8.06-18-18-18" id="Oval-2" stroke="url(#a)" stroke-width="2">
+                    <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 18 18"
+                        to="360 18 18"
+                        dur="0.9s"
+                        repeatCount="indefinite" />
+                </path>
+                <circle fill="#22292F" cx="36" cy="18" r="1">
+                    <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 18 18"
+                        to="360 18 18"
+                        dur="0.9s"
+                        repeatCount="indefinite" />
+                </circle>
+            </g>
+        </g>
+    </svg>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="box box-primary">
+                            <div class="box-header">
+
+                                <h3 class="box-title">Sales Current Financial Year</h3>
+
+
+                            </div>
+
+                            <div class="box-body">
+                                <div id="bihokdfumtvzjyaxnwgplcqse" style='height: 400px !important;'>
+                                </div>
+                                <div id="bihokdfumtvzjyaxnwgplcqse_loader" style="
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    align-items: center;
+    height: 400px;
+    
+">
+                                    <svg width="50" height="50" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a">
+                <stop stop-color="#22292F" stop-opacity="0" offset="0%"/>
+                <stop stop-color="#22292F" stop-opacity=".631" offset="63.146%"/>
+                <stop stop-color="#22292F" offset="100%"/>
+            </linearGradient>
+        </defs>
+        <g fill="none" fill-rule="evenodd">
+            <g transform="translate(1 1)">
+                <path d="M36 18c0-9.94-8.06-18-18-18" id="Oval-2" stroke="url(#a)" stroke-width="2">
+                    <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 18 18"
+                        to="360 18 18"
+                        dur="0.9s"
+                        repeatCount="indefinite" />
+                </path>
+                <circle fill="#22292F" cx="36" cy="18" r="1">
+                    <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 18 18"
+                        to="360 18 18"
+                        dur="0.9s"
+                        repeatCount="indefinite" />
+                </circle>
+            </g>
+        </g>
+    </svg>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                </div>
+                <!-- sales chart end -->
+                <!-- products less than alert quntity -->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="box box-warning">
+                            <div class="box-header">
+                                <i class="fa fa-exclamation-triangle text-yellow" aria-hidden="true"></i>
+                                <h3 class="box-title">Sales Payment Due <i class="fa fa-info-circle text-info hover-q no-print " aria-hidden="true" data-container="body" data-toggle="popover" data-placement="auto bottom" data-content="Pending payment for Sales. <br/><small class='text-muted'>Based on invoice pay term. <br/> Showing payments to be received in 7 days or less.</small>"
+                                        data-html="true" data-trigger="hover"></i></h3>
+
+
+                            </div>
+
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <table class="table table-bordered table-striped" id="sales_payment_dues_table" style="width: 100%;">
+                                            <thead>
+                                                <tr>
+                                                    <th>Customer</th>
+                                                    <th>Invoice No.</th>
+                                                    <th>Due Amount</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="box box-warning">
+                            <div class="box-header">
+                                <i class="fa fa-exclamation-triangle text-yellow" aria-hidden="true"></i>
+                                <h3 class="box-title">Purchase Payment Due <i class="fa fa-info-circle text-info hover-q no-print " aria-hidden="true" data-container="body" data-toggle="popover" data-placement="auto bottom" data-content="Pending payment for purchases. <br/><small class='text-muted'>Based on supplier's pay term. <br/> Showing payments to be paid in 7 days or less.</small>"
+                                        data-html="true" data-trigger="hover"></i></h3>
+
+
+                            </div>
+
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <table class="table table-bordered table-striped" id="purchase_payment_dues_table" style="width: 100%;">
+                                            <thead>
+                                                <tr>
+                                                    <th>Supplier</th>
+                                                    <th>Reference No</th>
+                                                    <th>Due Amount</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col-sm-6 ">
+                        <div class="box box-warning">
+                            <div class="box-header">
+                                <i class="fa fa-exclamation-triangle text-yellow" aria-hidden="true"></i>
+                                <h3 class="box-title">Product Stock Alert <i class="fa fa-info-circle text-info hover-q no-print " aria-hidden="true" data-container="body" data-toggle="popover" data-placement="auto bottom" data-content="Products with low stock.<br/><small class='text-muted'>Based on product alert quantity set in add product screen.<br> Purchase this products before stock ends.</small>"
+                                        data-html="true" data-trigger="hover"></i></h3>
+
+
+                            </div>
+
+                            <div class="box-body">
+                                <table class="table table-bordered table-striped" id="stock_alert_table" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Location</th>
+                                            <th>Current stock</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="box box-warning">
+                            <div class="box-header">
+                                <i class="fa fa-exclamation-triangle text-yellow" aria-hidden="true"></i>
+                                <h3 class="box-title">Stock Expiry Alert <i class="fa fa-info-circle text-info hover-q no-print " aria-hidden="true" data-container="body" data-toggle="popover" data-placement="auto bottom" data-content="List of stocks expiring in 30 days <br> <small class='text-muted'>You can set the no. of days in Business Settings </small>"
+                                        data-html="true" data-trigger="hover"></i></h3>
+
+
+                            </div>
+
+                            <div class="box-body">
+                                <input type="hidden" id="stock_expiry_alert_days" value="2024-06-16">
+                                <table class="table table-bordered table-striped" id="stock_expiry_alert_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Location</th>
+                                            <th>Stock Left</th>
+                                            <th>Expires in</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="box box-warning">
+                            <div class="box-header">
+                                <i class="fas fa-list-alt text-yellow fa-lg" aria-hidden="true"></i>
+                                <h3 class="box-title">Sales Order</h3>
+
+
+                            </div>
+
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped ajax_view" id="sales_order_table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Action</th>
+                                                        <th>Date</th>
+                                                        <th>Order No.</th>
+                                                        <th>Customer name</th>
+                                                        <th>Contact Number</th>
+                                                        <th>Location</th>
+                                                        <th>Status</th>
+                                                        <th>Shipping Status</th>
+                                                        <th>Quantity Remaining</th>
+                                                        <th>Added By</th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box box-warning">
+                    <div class="box-header">
+                        <i class="fas fa-list-alt text-yellow fa-lg" aria-hidden="true"></i>
+                        <h3 class="box-title">Pending Shipments</h3>
+
+
+                    </div>
+
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped ajax_view" id="shipments_table">
+                                        <thead>
+                                            <tr>
+                                                <th>Action</th>
+                                                <th>Date</th>
+                                                <th>Invoice No.</th>
+                                                <th>Customer name</th>
+                                                <th>Contact Number</th>
+                                                <th>Location</th>
+                                                <th>Shipping Status</th>
+                                                <th>Payment Status</th>
+                                                <th>Service staff</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+
+
+                <!-- can('dashboard.data') end -->
+            </section>
+            <!-- /.content -->
+            <div class="modal fade payment_modal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+            </div>
+            <div class="modal fade edit_pso_status_modal" tabindex="-1" role="dialog"></div>
+            <div class="modal fade edit_payment_modal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+            </div>
+
+            <div class='scrolltop no-print'>
+                <div class='scroll icon'><i class="fas fa-angle-up"></i></div>
+            </div>
+
+
+            <!-- This will be printed -->
+            <section class="invoice print_section" id="receipt_section">
+            </section>
+
+        </div>
+        <div class="modal fade" id="todays_profit_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Today's profit</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" id="modal_today" value="2024-05-17">
+                        <div class="row">
+                            <div id="todays_profit">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer no-print">
+            <!-- To the right -->
+            <!-- <div class="pull-right hidden-xs">
+      Anything you want
+    </div> -->
+            <!-- Default to the left -->
+            <small>
+    	Hisabkarlay POS - V5.22 | Copyright &copy; 2024 All rights reserved.
+    </small>
+            <div class="btn-group pull-right">
+                <button type="button" class="btn btn-success btn-xs toggle-font-size" data-size="s"><i class="fa fa-font"></i> <i class="fa fa-minus"></i></button>
+                <button type="button" class="btn btn-success btn-xs toggle-font-size" data-size="m"> <i class="fa fa-font"></i> </button>
+                <button type="button" class="btn btn-success btn-xs toggle-font-size" data-size="l"><i class="fa fa-font"></i> <i class="fa fa-plus"></i></button>
+                <button type="button" class="btn btn-success btn-xs toggle-font-size" data-size="xl"><i class="fa fa-font"></i> <i class="fa fa-plus"></i><i class="fa fa-plus"></i></button>
+            </div>
+        </footer>
+        <audio id="success-audio">
+              <source src="https://demosystem.hisabkarlay.com/audio/success.ogg?v=511" type="audio/ogg">
+              <source src="https://demosystem.hisabkarlay.com/audio/success.mp3?v=511" type="audio/mpeg">
+            </audio>
+        <audio id="error-audio">
+              <source src="https://demosystem.hisabkarlay.com/audio/error.ogg?v=511" type="audio/ogg">
+              <source src="https://demosystem.hisabkarlay.com/audio/error.mp3?v=511" type="audio/mpeg">
+            </audio>
+        <audio id="warning-audio">
+              <source src="https://demosystem.hisabkarlay.com/audio/warning.ogg?v=511" type="audio/ogg">
+              <source src="https://demosystem.hisabkarlay.com/audio/warning.mp3?v=511" type="audio/mpeg">
+            </audio>
+    </div>
+
+    <div class="modal fade" id="task_modal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    </div>
+
+    <script type="text/javascript">
+        base_path = "https://demosystem.hisabkarlay.com";
+        //used for push notification
+        APP = {};
+        APP.PUSHER_APP_KEY = '';
+        APP.PUSHER_APP_CLUSTER = '';
+        APP.INVOICE_SCHEME_SEPARATOR = '-';
+        //variable from app service provider
+        APP.PUSHER_ENABLED = '';
+        APP.USER_ID = "1";
+    </script>
+
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js?v=$asset_v"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js?v=$asset_v"></script>
+<![endif]-->
+    <script src="https://demosystem.hisabkarlay.com/js/vendor.js?v=511"></script>
+
+    <script src="https://demosystem.hisabkarlay.com/js/lang/en.js?v=511"></script>
+
+    <script>
+        Dropzone.autoDiscover = false;
+        moment.tz.setDefault('Asia/Karachi');
+        $(document).ready(function() {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+        });
+
+        var financial_year = {
+            start: moment('2023-07-01'),
+            end: moment('2024-06-30'),
+        }
+
+        var datepicker_date_format = "dd-mm-yyyy";
+        var moment_date_format = "DD-MM-YYYY";
+        var moment_time_format = "HH:mm";
+
+        var app_locale = "en";
+
+        var non_utf8_languages = [
+            "ar",
+            "hi",
+            "ps",
+        ];
+
+        var __default_datatable_page_entries = "1000";
+
+        var __new_notification_count_interval = "60000";
+    </script>
+
+    <script src="https://demosystem.hisabkarlay.com/js/lang/en.js?v=511"></script>
+
+    <script src="https://demosystem.hisabkarlay.com/js/functions.js?v=511"></script>
+    <script src="https://demosystem.hisabkarlay.com/js/common.js?v=511"></script>
+    <script src="https://demosystem.hisabkarlay.com/js/app.js?v=511"></script>
+    <script src="https://demosystem.hisabkarlay.com/js/help-tour.js?v=511"></script>
+    <script src="https://demosystem.hisabkarlay.com/js/documents_and_note.js?v=511"></script>
+
+    <!-- TODO -->
+
+    <script src="https://demosystem.hisabkarlay.com/js/home.js?v=511"></script>
+    <script src="https://demosystem.hisabkarlay.com/js/payment.js?v=511"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(document).on('click', '.edit-so-status', function() {
+                var url = $(this).data('href');
+                $.ajax({
+                    method: "GET",
+                    dataType: "html",
+                    url: url,
+                    success: function(result) {
+                        $('.edit_pso_status_modal').html(result).modal("show");
+                    }
+                });
+            });
+
+            $(document).on('submit', 'form#update_so_status_form', function(e) {
+                e.preventDefault();
+                var url = $('form#update_so_status_form').attr('action');
+                var method = $('form#update_so_status_form').attr('method');
+                var data = $('form#update_so_status_form').serialize();
+                var ladda = Ladda.create(document.querySelector('.ladda-button'));
+                ladda.start();
+                $.ajax({
+                    method: method,
+                    dataType: "json",
+                    url: url,
+                    data: data,
+                    success: function(result) {
+                        ladda.stop();
+                        if (result.success) {
+                            $('.edit_pso_status_modal').modal("hide");
+                            toastr.success(result.msg);
+                            if (typeof(sell_table) != 'undefined') {
+                                sell_table.ajax.reload();
+                            }
+                            if (typeof(sales_order_table) != 'undefined') {
+                                sales_order_table.ajax.reload();
+                            }
+                        } else {
+                            toastr.error(result.msg);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(document).on('click', '.edit-po-status', function() {
+                var url = $(this).data('href');
+                $.ajax({
+                    method: "GET",
+                    dataType: "html",
+                    url: url,
+                    success: function(result) {
+                        $('.edit_pso_status_modal').html(result).modal("show");
+                    }
+                });
+            });
+
+            $(document).on('submit', 'form#update_po_status_form', function(e) {
+                e.preventDefault();
+                var url = $('form#update_po_status_form').attr('action');
+                var method = $('form#update_po_status_form').attr('method');
+                var data = $('form#update_po_status_form').serialize();
+                var ladda = Ladda.create(document.querySelector('.ladda-button'));
+                ladda.start();
+                $.ajax({
+                    method: method,
+                    dataType: "json",
+                    url: url,
+                    data: data,
+                    success: function(result) {
+                        ladda.stop();
+                        if (result.success) {
+                            $('.edit_pso_status_modal').modal("hide");
+                            toastr.success(result.msg);
+                            if (typeof(purchase_order_table) != 'undefined') {
+                                purchase_order_table.ajax.reload();
+                            }
+                        } else {
+                            toastr.error(result.msg);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function vouxspaewltigbnjqdfzkrymh_create(data) {
+            vouxspaewltigbnjqdfzkrymh_rendered = true;
+            document.getElementById("vouxspaewltigbnjqdfzkrymh_loader").style.display = 'none';
+            window.vouxspaewltigbnjqdfzkrymh = new Highcharts.Chart("vouxspaewltigbnjqdfzkrymh", {
+                series: data,
+                "credits": {
+                    "enabled": false
+                },
+                "title": {
+                    "text": null
+                },
+                "yAxis": {
+                    "title": {
+                        "text": "Total Sales (PKR)"
+                    }
+                },
+                "legend": {
+                    "align": "right",
+                    "verticalAlign": "top",
+                    "floating": true,
+                    "layout": "vertical"
+                },
+                "xAxis": {
+                    "categories": ["18 Apr 2024", "19 Apr 2024", "20 Apr 2024", "21 Apr 2024", "22 Apr 2024", "23 Apr 2024", "24 Apr 2024", "25 Apr 2024", "26 Apr 2024", "27 Apr 2024", "28 Apr 2024", "29 Apr 2024", "30 Apr 2024", "1 May 2024", "2 May 2024", "3 May 2024", "4 May 2024", "5 May 2024", "6 May 2024", "7 May 2024", "8 May 2024", "9 May 2024", "10 May 2024", "11 May 2024", "12 May 2024", "13 May 2024", "14 May 2024", "15 May 2024", "16 May 2024", "17 May 2024"]
+                }
+            });
+        }
+        let vouxspaewltigbnjqdfzkrymh_rendered = false;
+        let vouxspaewltigbnjqdfzkrymh_load = function() {
+            if (document.getElementById("vouxspaewltigbnjqdfzkrymh") && !vouxspaewltigbnjqdfzkrymh_rendered) {
+                vouxspaewltigbnjqdfzkrymh_create([{
+                    "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18000, 7174, 2430, 0, 1430, 980, 7030, 9435, 995, 3090, 0, 0, 0, 334023, 1790, 12900, 0],
+                    "name": "Hisab KarLay Demo POS (BL0001)",
+                    "type": "line"
+                }])
+            }
+        };
+        window.addEventListener("load", vouxspaewltigbnjqdfzkrymh_load);
+        document.addEventListener("turbolinks:load", vouxspaewltigbnjqdfzkrymh_load);
+    </script>
+
+    <script type="text/javascript">
+        function bihokdfumtvzjyaxnwgplcqse_create(data) {
+            bihokdfumtvzjyaxnwgplcqse_rendered = true;
+            document.getElementById("bihokdfumtvzjyaxnwgplcqse_loader").style.display = 'none';
+            window.bihokdfumtvzjyaxnwgplcqse = new Highcharts.Chart("bihokdfumtvzjyaxnwgplcqse", {
+                series: data,
+                "credits": {
+                    "enabled": false
+                },
+                "title": {
+                    "text": null
+                },
+                "yAxis": {
+                    "title": {
+                        "text": "Total Sales (PKR)"
+                    }
+                },
+                "legend": {
+                    "align": "right",
+                    "verticalAlign": "top",
+                    "floating": true,
+                    "layout": "vertical"
+                },
+                "xAxis": {
+                    "categories": ["Jul-2023", "Aug-2023", "Sep-2023", "Oct-2023", "Nov-2023", "Dec-2023", "Jan-2024", "Feb-2024", "Mar-2024", "Apr-2024", "May-2024", "Jun-2024"]
+                }
+            });
+        }
+        let bihokdfumtvzjyaxnwgplcqse_rendered = false;
+        let bihokdfumtvzjyaxnwgplcqse_load = function() {
+            if (document.getElementById("bihokdfumtvzjyaxnwgplcqse") && !bihokdfumtvzjyaxnwgplcqse_rendered) {
+                bihokdfumtvzjyaxnwgplcqse_create([{
+                    "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 399277, 0],
+                    "name": "Hisab KarLay Demo POS (BL0001)",
+                    "type": "line"
+                }])
+            }
+        };
+        window.addEventListener("load", bihokdfumtvzjyaxnwgplcqse_load);
+        document.addEventListener("turbolinks:load", bihokdfumtvzjyaxnwgplcqse_load);
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            sales_order_table = $('#sales_order_table').DataTable({
+                processing: true,
+                serverSide: true,
+                scrollY: "75vh",
+                scrollX: true,
+                scrollCollapse: true,
+                aaSorting: [
+                    [1, 'desc']
+                ],
+                "ajax": {
+                    "url": 'https://demosystem.hisabkarlay.com/sells?sale_type=sales_order',
+                    "data": function(d) {
+                        d.for_dashboard_sales_order = true;
+
+                        if ($('#so_location').length > 0) {
+                            d.location_id = $('#so_location').val();
+                        }
+                    }
+                },
+                columnDefs: [{
+                    "targets": 7,
+                    "orderable": false,
+                    "searchable": false
+                }],
+                columns: [{
+                        data: 'action',
+                        name: 'action'
+                    },
+                    {
+                        data: 'transaction_date',
+                        name: 'transaction_date'
+                    },
+                    {
+                        data: 'invoice_no',
+                        name: 'invoice_no'
+                    },
+                    {
+                        data: 'conatct_name',
+                        name: 'conatct_name'
+                    },
+                    {
+                        data: 'mobile',
+                        name: 'contacts.mobile'
+                    },
+                    {
+                        data: 'business_location',
+                        name: 'bl.name'
+                    },
+                    {
+                        data: 'status',
+                        name: 'status'
+                    },
+                    {
+                        data: 'shipping_status',
+                        name: 'shipping_status'
+                    },
+                    {
+                        data: 'so_qty_remaining',
+                        name: 'so_qty_remaining',
+                        "searchable": false
+                    },
+                    {
+                        data: 'added_by',
+                        name: 'u.first_name'
+                    },
+                ]
+            });
+
+
+            $('#so_location').change(function() {
+                sales_order_table.ajax.reload();
+            });
+
+            sell_table = $('#shipments_table').DataTable({
+                processing: true,
+                serverSide: true,
+                aaSorting: [
+                    [1, 'desc']
+                ],
+                scrollY: "75vh",
+                scrollX: true,
+                scrollCollapse: true,
+                "ajax": {
+                    "url": 'https://demosystem.hisabkarlay.com/sells',
+                    "data": function(d) {
+                        d.only_pending_shipments = true;
+                        if ($('#pending_shipments_location').length > 0) {
+                            d.location_id = $('#pending_shipments_location').val();
+                        }
+                    }
+                },
+                columns: [{
+                        data: 'action',
+                        name: 'action',
+                        searchable: false,
+                        orderable: false
+                    },
+                    {
+                        data: 'transaction_date',
+                        name: 'transaction_date'
+                    },
+                    {
+                        data: 'invoice_no',
+                        name: 'invoice_no'
+                    },
+                    {
+                        data: 'conatct_name',
+                        name: 'conatct_name'
+                    },
+                    {
+                        data: 'mobile',
+                        name: 'contacts.mobile'
+                    },
+                    {
+                        data: 'business_location',
+                        name: 'bl.name'
+                    },
+                    {
+                        data: 'shipping_status',
+                        name: 'shipping_status'
+                    },
+                    {
+                        data: 'payment_status',
+                        name: 'payment_status'
+                    },
+                    {
+                        data: 'waiter',
+                        name: 'ss.first_name',
+                        visible: false
+                    }
+                ],
+                "fnDrawCallback": function(oSettings) {
+                    __currency_convert_recursively($('#sell_table'));
+                },
+                createdRow: function(row, data, dataIndex) {
+                    $(row).find('td:eq(4)').attr('class', 'clickable_td');
+                }
+            });
+
+            $('#pending_shipments_location').change(function() {
+                sell_table.ajax.reload();
+            });
+        });
+    </script>
+
+    <div class="modal fade" id="clock_in_clock_out_modal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <form method="POST" action="https://demosystem.hisabkarlay.com/hrm/clock-in-clock-out" accept-charset="UTF-8" id="clock_in_clock_out_form"><input name="_token" type="hidden" value="OHSDyHJxklO90PgIMaNnVq9rvjHnjqcffhGvHBIS">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title"><span id="clock_in_text">Clock In</span>
+                            <span id="clock_out_text">Clock Out</span></h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <input type="hidden" name="type" id="type">
+                            <div class="form-group col-md-12">
+                                <strong>IP Address: 139.190.235.88</strong>
+                            </div>
+                            <div class="form-group col-md-12 clock_in_note ">
+                                <label for="clock_in_note">Clock in note:</label>
+                                <textarea class="form-control" placeholder="Clock in note" rows="3" name="clock_in_note" cols="50" id="clock_in_note"></textarea>
+                            </div>
+                            <div class="form-group col-md-12 clock_out_note  hide ">
+                                <label for="clock_out_note">Clock out note:</label>
+                                <textarea class="form-control" placeholder="Clock out note" rows="3" name="clock_out_note" cols="50" id="clock_out_note"></textarea>
+                            </div>
+                            <input type="hidden" name="clock_in_out_location" id="clock_in_out_location" value="">
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+
+                </form>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#essentials_dob').datepicker();
+            $('.clock_in_btn, .clock_out_btn').click(function() {
+                var type = $(this).data('type');
+                if (type == 'clock_in') {
+                    $('#clock_in_clock_out_modal').find('#clock_in_text').removeClass('hide');
+                    $('#clock_in_clock_out_modal').find('#clock_out_text').addClass('hide');
+                    $('#clock_in_clock_out_modal').find('.clock_in_note').removeClass('hide');
+                    $('#clock_in_clock_out_modal').find('.clock_out_note').addClass('hide');
+                } else if (type == 'clock_out') {
+                    $('#clock_in_clock_out_modal').find('#clock_in_text').addClass('hide');
+                    $('#clock_in_clock_out_modal').find('#clock_out_text').removeClass('hide');
+                    $('#clock_in_clock_out_modal').find('.clock_in_note').addClass('hide');
+                    $('#clock_in_clock_out_modal').find('.clock_out_note').removeClass('hide');
+                }
+                $('#clock_in_clock_out_modal').find('input#type').val(type);
+
+                $('#clock_in_clock_out_modal').modal('show');
+            });
+        });
+
+        $(document).on('submit', 'form#clock_in_clock_out_form', function(e) {
+            e.preventDefault();
+            $(this).find('button[type="submit"]').attr('disabled', true);
+            var data = $(this).serialize();
+
+            $.ajax({
+                method: $(this).attr('method'),
+                url: $(this).attr('action'),
+                dataType: 'json',
+                data: data,
+                success: function(result) {
+                    if (result.success == true) {
+                        $('div#clock_in_clock_out_modal').modal('hide');
+
+                        var shift_details = document.createElement("div");
+                        if (result.current_shift) {
+                            shift_details.innerHTML = result.current_shift;
+                        }
+
+                        swal({
+                            title: result.msg,
+                            content: shift_details,
+                            icon: 'success'
+                        });
+
+                        if (typeof attendance_table !== 'undefined') {
+                            attendance_table.ajax.reload();
+                        }
+                        if (result.type == 'clock_in') {
+                            $('.clock_in_btn').addClass('hide');
+                            $('.clock_out_btn').removeClass('hide');
+                        } else if (result.type == 'clock_out') {
+                            $('.clock_out_btn').addClass('hide');
+                            $('.clock_in_btn').removeClass('hide');
+                        }
+                    } else {
+                        var shift_details = document.createElement("p");
+                        if (result.shift_details) {
+                            shift_details.innerHTML = result.shift_details;
+                        }
+
+                        swal({
+                            title: result.msg,
+                            content: shift_details,
+                            icon: 'error'
+                        })
+                    }
+                    $('#clock_in_clock_out_form')[0].reset();
+                    $('#clock_in_clock_out_form').find('button[type="submit"]').removeAttr('disabled');
+                },
+            });
+        });
+
+        $(document).on('click', '#get_current_location', function() {
+            getFullAddress();
+        });
+
+        function getFullAddress() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        var latitude = position.coords.latitude;
+                        var longitude = position.coords.longitude;
+
+                        $.ajax({
+                            url: '/user-location/' + latitude + ',' + longitude,
+                            dataType: 'json',
+                            success: function(result) {
+                                if (typeof result.address !== 'undefined') {
+
+                                    $("input#clock_in_out_location").val(result.address);
+                                    $("span.clock_in_out_location").text(result.address);
+                                    $("div.ask_location").hide();
+                                } else if (typeof result.error_message !== 'undefined') {
+                                    console.log(result.error_message);
+                                }
+                            }
+                        });
+
+                    },
+                    () => {
+                        $("div.ask_location").show();
+                        $("span.location_required").text("Location is required, you must enable location")
+                        console.log("Error: The Geolocation service failed.");
+                    }
+                );
+            } else {
+                $("div.ask_location").show();
+                $("span.location_required").text("Location is required, you must enable location")
+                // Browser doesn't support Geolocation
+                console.log("Browser doesn't support Geolocation");
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var locale = "en";
+            var isRTL = false;
+            $('#calendar').fullCalendar('option', {
+                locale: locale,
+                isRTL: isRTL
+            });
+        });
+    </script>
+    <div class="modal fade view_modal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel"></div>
+
+    <script type="text/javascript">
+        $('#task_modal').on('shown.bs.modal', function() {
+            $('form#task_form .datepicker').datetimepicker({
+                format: moment_date_format + ' ' + moment_time_format,
+                ignoreReadonly: true,
+            });
+            $('form#task_form .select2').select2({
+                dropdownParent: $(this)
+            });
+
+            tinymce.init({
+                selector: 'textarea#to_do_description',
+            });
+
+            if ($('#media_upload').length) {
+                $(this).find("div#media_upload").dropzone({
+                    url: $('#media_upload_url').val(),
+                    paramName: 'file',
+                    uploadMultiple: true,
+                    autoProcessQueue: false,
+                    addRemoveLinks: true,
+                    params: {
+                        'model_id': $('#model_id').val(),
+                        'model_type': $('#model_type').val(),
+                        'model_media_type': $('#model_media_type').val()
+                    },
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function(file, response) {
+                        if (response.success) {
+                            toastr.success(response.msg);
+                            $("#task_modal").modal('hide');
+                        } else {
+                            toastr.error(response.msg);
+                        }
+                    },
+                });
+            }
+
+            //form validation
+            $("form#task_form").validate();
+        });
+
+        $('#task_modal').on('hide.bs.modal', function() {
+            tinymce.remove("textarea#to_do_description");
+        });
+
+        //form submit
+        $(document).on('submit', 'form#task_form', function(e) {
+            e.preventDefault();
+            var url = $(this).attr("action");
+            var method = $(this).attr("method");
+            var data = $("form#task_form").serialize();
+            var ladda = Ladda.create(document.querySelector('.ladda-button'));
+            ladda.start();
+            $.ajax({
+                method: method,
+                url: url,
+                data: data,
+                dataType: "json",
+                success: function(result) {
+                    ladda.stop();
+                    if (result.success == true) {
+                        var myDropzone = Dropzone.forElement("#media_upload");
+
+                        if (typeof result.todo_id !== 'undefined') {
+                            myDropzone.options.params.model_id = result.todo_id;
+                        }
+
+                        myDropzone.processQueue();
+
+                        if (typeof task_table !== 'undefined') {
+                            task_table.ajax.reload();
+                        }
+
+                        if ($('#task_modal').length) {
+                            $('#task_modal').modal('hide');
+                        }
+
+                        if ($('#calendar').length) {
+                            $('#calendar').fullCalendar('refetchEvents');
+                        }
+                    } else {
+                        toastr.error(result.msg);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

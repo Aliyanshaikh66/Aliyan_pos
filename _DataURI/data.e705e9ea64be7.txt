@@ -1,0 +1,1 @@
+chrome-extension://ijejnggjjphlenbhmjhhgcdpehhacaal/js/video-recorder-content.js
